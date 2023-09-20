@@ -9,7 +9,7 @@ function setup() {
   myParagraph.position(0, 0);
 //   myParagraph.mouseClicked(makeRed);
   secondText = createP("some text");
-  button = createButton('click me');
+  button = createButton('i want new color');
   button.position(200,200);
   button.mousePressed(makeChange);
   colorMode(HSB, 255);
@@ -29,7 +29,7 @@ y = (mouseY);
 // }
 
 function makeChange() {
-  secondText.style("color", "blue");
+  secondText.style("color", color(random(0, 255), 255, 255));
 }
 
 /*
