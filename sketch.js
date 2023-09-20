@@ -1,4 +1,5 @@
 var myParagraph;
+var secondText;
 let x=0;
 let y=0;
 let button;
@@ -6,9 +7,13 @@ let button;
 function setup() {
   myParagraph = createP("html");
   myParagraph.position(0, 0);
-  myParagraph.mouseClicked(makeRed);
+//   myParagraph.mouseClicked(makeRed);
+  secondText = createP("some text");
   button = createButton('click me');
   button.position(200,200);
+  button.mousePressed(makeChange);
+  colorMode(HSB, 255);
+
 }
 
 function draw() {
@@ -18,9 +23,13 @@ x = (mouseX);
 y = (mouseY);
 }
 
+// function doSomething() {
+//    var val = random(255);
+//    background(val);
+// }
 
-function makeRed() {
-  myParagraph.style("color", "red");
+function makeChange() {
+  secondText.style("color", "blue");
 }
 
 /*
