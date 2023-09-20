@@ -1,4 +1,6 @@
 var myParagraph;
+let x=0;
+let y=0;
 
 function setup() {
   myParagraph = createP("html");
@@ -7,7 +9,10 @@ function setup() {
 }
 
 function draw() {
-  myParagraph.position(frameCount % 200, 0);
+//   myParagraph.position(frameCount % 200, 0);
+myParagraph.position(x,y);
+x = (mouseX);
+y = (mouseY);
 }
 
 function makeRed() {
@@ -20,6 +25,7 @@ Some Questions:
 0. What is this percent sign all about? (hint: it's "modulus")
 1. Where, in the p5 reference, do we find all this DOM stuff?
 2. Why is the text so large when it's just a "paragraph"?
+-css style has it set to xx-large
 3. "color" and "red"? Where did those come from and where 
    could you find more style attributes that could be
    changed?
