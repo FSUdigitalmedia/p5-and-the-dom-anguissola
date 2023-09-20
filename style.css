@@ -1,4 +1,8 @@
 p {
   font-size: xx-large;
-  /* color: red; */
+}
+
+#cat {
+  position: fixed; 
+  right: 0;
 }

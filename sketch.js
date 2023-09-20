@@ -3,9 +3,17 @@ var secondText;
 let x=0;
 let y=0;
 let button;
+let img;
+
+function preload() {
+   //p5 img
+   img = loadImage('dog.png');
+}
 
 function setup() {
-  myParagraph = createP("html");
+   createCanvas(4000,4000);
+   image(img,0,0);
+  myParagraph = createP("hi dog");
   myParagraph.position(0, 0);
 //   myParagraph.mouseClicked(makeRed);
   secondText = createP("some text");
@@ -29,7 +37,7 @@ y = (mouseY);
 // }
 
 function makeChange() {
-  secondText.style("color", color(random(0, 255), 255, 255));
+  myParagraph.style("color", color(random(0, 255), 255, 255));
 }
 
 /*
