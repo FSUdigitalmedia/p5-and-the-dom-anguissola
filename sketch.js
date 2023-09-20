@@ -1,11 +1,14 @@
 var myParagraph;
 let x=0;
 let y=0;
+let button;
 
 function setup() {
   myParagraph = createP("html");
   myParagraph.position(0, 0);
   myParagraph.mouseClicked(makeRed);
+  button = createButton('click me');
+  button.position(200,200);
 }
 
 function draw() {
@@ -14,6 +17,7 @@ myParagraph.position(x,y);
 x = (mouseX);
 y = (mouseY);
 }
+
 
 function makeRed() {
   myParagraph.style("color", "red");
