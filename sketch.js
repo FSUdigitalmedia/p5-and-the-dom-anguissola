@@ -4,6 +4,7 @@ let x=0;
 let y=0;
 let button;
 let img;
+let slider;
 
 function preload() {
    //p5 img
@@ -12,29 +13,40 @@ function preload() {
 
 function setup() {
    createCanvas(4000,4000);
+
+
    image(img,0,0);
-  myParagraph = createP("hi dog");
-  myParagraph.position(0, 0);
-//   myParagraph.mouseClicked(makeRed);
-  secondText = createP("some text");
-  button = createButton('i want new color');
-  button.position(200,200);
-  button.mousePressed(makeChange);
-  colorMode(HSB, 255);
+
+   slider=createSlider(3,72,12);
+   slider.position(50,300);
+
+
+
+   // .textSize(10);
+
+   secondText = createP("some text");
+
+   button = createButton('i want new color');
+   button.position(200,200);
+   button.mousePressed(makeChange);
+
+   colorMode(HSB, 255);
 
 }
 
 function draw() {
 //   myParagraph.position(frameCount % 200, 0);
+// moving text
+myParagraph = createP("hi dog");
+myParagraph.position(0, 0);
 myParagraph.position(x,y);
 x = (mouseX);
 y = (mouseY);
-}
 
-// function doSomething() {
-//    var val = random(255);
-//    background(val);
-// }
+// myParagraph.textSize(70);
+
+
+}
 
 function makeChange() {
   myParagraph.style("color", color(random(0, 255), 255, 255));
