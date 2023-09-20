@@ -3,6 +3,7 @@ var secondText;
 let x=0;
 let y=0;
 let button;
+let button2;
 let img;
 let slider;
 
@@ -20,7 +21,8 @@ function setup() {
    slider=createSlider(3,72,12);
    slider.position(50,300);
 
-
+   myParagraph = createP("hi dog");
+   myParagraph.position(0, 0);
 
    // .textSize(10);
 
@@ -30,6 +32,10 @@ function setup() {
    button.position(200,200);
    button.mousePressed(makeChange);
 
+   button2 = createButton('i want new position');
+   button2.position(250,250);
+   button2.mousePressed(makeMove);
+
    colorMode(HSB, 255);
 
 }
@@ -37,19 +43,19 @@ function setup() {
 function draw() {
 //   myParagraph.position(frameCount % 200, 0);
 // moving text
-myParagraph = createP("hi dog");
-myParagraph.position(0, 0);
 myParagraph.position(x,y);
 x = (mouseX);
 y = (mouseY);
-
-// myParagraph.textSize(70);
-
 
 }
 
 function makeChange() {
   myParagraph.style("color", color(random(0, 255), 255, 255));
+}
+
+function makeMove() {
+   var movement = random(855);
+   image(img, movement, movement);
 }
 
 /*
