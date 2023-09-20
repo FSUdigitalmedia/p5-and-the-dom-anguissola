@@ -1,8 +1,16 @@
-p {
-  /* font-size: xx-large; */
-}
+
 
 #cat {
   position: fixed; 
   right: 0;
+}
+
+slider {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 20px;
+  position: relative;
 }

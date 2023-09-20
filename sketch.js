@@ -20,6 +20,7 @@ function setup() {
 
    slider=createSlider(3,72,12);
    slider.position(50,300);
+   slider.size(9000);
 
    myParagraph = createP("hi dog");
    myParagraph.position(0, 0);
